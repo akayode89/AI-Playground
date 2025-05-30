@@ -56,14 +56,3 @@ if __name__=="__main__":
     if user_input:
         product_search = get_product_details(user_input)
         st.write(product_search)
-
-if __name__ == "__main__":
-    user_input = product_input()
-    if user_input:
-        product_search = get_product_details(user_input)
-
-        # Ensure product_search contains valid data before rendering
-        if isinstance(product_search, dict):  # Assuming response is a dict
-            st.write(product_search)
-        else:
-            st.error("Invalid product details retrieved.")
